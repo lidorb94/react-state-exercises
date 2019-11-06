@@ -17,15 +17,31 @@ class Counter extends Component {
 	}
 
 	increase() {
-		this.setState({
-			num: this.state.num + 1
-		});
+		if(this.state.num < 20){
+			this.setState({
+				num: this.state.num + 1
+			});
+		} else if (this.state.num == 20){
+			alert("you have reached the limit!")
+		}
 	}
 
 	decrease() {
-		this.setState({
-			num: this.state.num - 1
-		});
+		if(this.state.num > 0){
+			this.setState({
+				num: this.state.num - 1
+			});
+		}
+	}
+
+	increase10(){
+		if(this.state.num < 20){
+			this.setState({
+				num: this.state.num + 10
+			});
+		} else if (this.state.num == 20){
+			alert("you have reached the limit!")
+		}
 	}
 
 	render() {
@@ -34,6 +50,7 @@ class Counter extends Component {
 				<h1>Counter: </h1>
 				<button onClick={this.increase.bind(this)}>Increase</button>
 				<button onClick={this.decrease.bind(this)}>Decrease</button>
+				<button onClick={this.increase10.bind(this)}>increase 10</button>
 				<span>{this.state.num}</span>
 			</div>
 		);

@@ -4,8 +4,14 @@
     justify-content: space-between;
 }
 
-.Board-option {
+.Board-option-blue {
     width: 50px;
     height: 60px;
     border: 3px solid #6495ee;
+}
+
+.Board-option-red {
+    width: 50px;
+    height: 60px;
+    border: 3px solid red;
 }
